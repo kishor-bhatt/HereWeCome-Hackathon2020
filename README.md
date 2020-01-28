@@ -1,11 +1,14 @@
 # HereWeCome-Hackathon2020
+## Introduction
+It's a Multi Vehicle Waypoint (MVW) Sequencing application for finding optimal route for multiple vehicles, multiple pickups scenarios.
 
 ## How to run the application
-To run you need to have the python installed. Once that is install, run below command from the web application directory.
+To run the application, you need to have python installed. Once that is installed (https://www.python.org/downloads), run below command from the web application directory.
 
-`>>cd web-mwv`
-
-`>>python -m SimpleHTTPServer 8080`
+```
+$cd web-mwv
+$python -m SimpleHTTPServer 8080
+```
 
 ## Hackathon2020 BackEnd Service
 
