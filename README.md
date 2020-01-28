@@ -9,6 +9,7 @@ Endpoint - http://localhost:8080/api/getRoute/
 
 sample request body like below
 
+```json
 { 
    "vehcile":[ 
       { 
@@ -54,6 +55,9 @@ sample request body like below
       }
    ]
 }
+
+```
+
 
 
 Sample response like below
