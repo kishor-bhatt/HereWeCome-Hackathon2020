@@ -1,7 +1,13 @@
 # HereWeCome-Hackathon2020
 
-Hackathon2020
-BackEnd Service
+## How to run the application
+To run you need to have the python installed. Once that is install, run below command from the web application directory.
+
+`>>cd web-mwv`
+
+`>>python -m SimpleHTTPServer 8080`
+
+## Hackathon2020 BackEnd Service
 
 Start the application using the MultiWaypointVechileSequenceApp class
 
