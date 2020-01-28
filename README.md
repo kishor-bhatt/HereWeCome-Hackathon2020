@@ -61,7 +61,7 @@ sample request body like below
 
 
 Sample response like below
-
+```json
 { 
    "destination":"Here Techologies Bangalore",
    "vehicles":{ 
@@ -113,6 +113,8 @@ Sample response like below
       ]
    }
 }
+
+```
 
 
 
