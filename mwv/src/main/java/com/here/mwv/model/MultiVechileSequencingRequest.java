@@ -14,7 +14,10 @@ public class MultiVechileSequencingRequest {
     private String destination;
 
     @JsonProperty("vehicles")
-    private List<Vechile> vechile;
+    private Vechiles vechiles;
+
+    @JsonProperty("assets")
+    private Assets assets;
 
 
     @JsonProperty("reportingTime")

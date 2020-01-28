@@ -32,25 +32,30 @@
         <exec.classpathScope>compile</exec.classpathScope>
         <spring-boot.version>2.1.4.RELEASE</spring-boot.version>
         <lombok.version>1.16.16</lombok.version>
+        <here-oauth-client.version>0.4.19</here-oauth-client.version>
     </properties>
 
-    <dependencies>]
-        <dependency>
-            <groupId>com.here.traffic.realtime</groupId>
-            <artifactId>traffic_v1_java</artifactId>
-            <version>1.1.0</version>
-            <type>jar</type>
-        </dependency>
-        <dependency>
-            <groupId>com.here.traffic.realtime</groupId>
-            <artifactId>traffic_v1_proto</artifactId>
-            <version>1.1.0</version>
-            <type>zip</type>
-        </dependency>
+    <dependencies>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
             <version>${spring-boot.version}</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-databind</artifactId>
+            <version>2.9.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-core</artifactId>
+            <version>2.9.4</version>
+        </dependency>
+        <dependency>
+            <groupId>com.fasterxml.jackson.core</groupId>
+            <artifactId>jackson-annotations</artifactId>
+            <version>2.9.4</version>
         </dependency>
         <dependency>
             <groupId>org.projectlombok</groupId>
@@ -71,6 +76,12 @@
             <artifactId>akka-http-core_2.11</artifactId>
             <version>10.1.5</version>
         </dependency>
+        <dependency>
+            <groupId>com.here.account</groupId>
+            <artifactId>here-oauth-client</artifactId>
+            <version>${here-oauth-client.version}</version>
+        </dependency>
+
     </dependencies>
 
     <build>
@@ -89,6 +100,26 @@
                         <goals>
                             <goal>compile</goal>
                         </goals>
+                    </execution>
+                </executions>
+            </plugin>
+
+            <plugin>
+                <groupId>io.swagger</groupId>
+                <artifactId>swagger-codegen-maven-plugin</artifactId>
+                <version>2.3.1</version>
+                <executions>
+                    <execution>
+                        <goals>
+                            <goal>generate</goal>
+                        </goals>
+                        <configuration>
+                            <inputSpec>${project.basedir}/src/main/resources/swagger/open-search-v1-external-spec.json</inputSpec>
+                            <language>java</language>
+                            <configOptions>
+                                <sourceFolder>src/gen/java/main</sourceFolder>
+                            </configOptions>
+                        </configuration>
                     </execution>
                 </executions>
             </plugin>
